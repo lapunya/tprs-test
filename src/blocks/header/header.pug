@@ -1,0 +1,14 @@
+mixin header(modifier)
+  header.header 
+    +menu
+    button(type='button').header__menu-btn
+      |  <svg class='header__menu-icon' viewBox="0 0 100 80" width="30" height="23">
+      |    <rect fill="#004685" width="100" height="11"></rect>
+      |    <rect fill="#004685" y="30" width="100" height="11"></rect>
+      |    <rect fill="#004685" y="60" width="100" height="11"></rect>
+      |  </svg>
+    img(src='./img/header-site-logo.svg' width='294' height='44' alt='Логотип сайта').header__main-logo
+    .header__help-wrapper
+      button(type='button').header__help-btn 
+        img(src='./img/header-help-icon.svg').header__help-icon
+      +support

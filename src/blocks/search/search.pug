@@ -1,0 +1,10 @@
+mixin search(modifier)
+  .search 
+    .container.search__container
+      h2.search__title Поиск начислений
+      form(method='post' action='#').search__form
+          input(type='text' required placeholder='Введите данные для поиска').search__input
+          button(type='submit').search__btn.search__btn--desktop Найти
+          button(type='submit').search__btn.search__btn--mobile
+            img(src='./img/search-icon.svg' width='26' height='26' alt='Иконка поиска').search__icon
+      span.search__note Чем больше параметров введено, тем полнее результаты поиска

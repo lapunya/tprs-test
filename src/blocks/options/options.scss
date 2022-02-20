@@ -1,0 +1,205 @@
+.options {
+
+    &__container {
+        padding-bottom: 60px;
+    }
+
+    &__main-title {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        padding: 60px 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        & .options__text {
+            margin-right: 10px;
+        }
+
+        &::after {
+            content: '';
+            transform: translateX(-50%);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 100vw;
+            height: 1px;
+            background-color: #00468533;
+        }
+
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+
+            & .options__text {
+                margin-right: 0;
+                margin-left: 10px;
+            }
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+    }
+
+    &__text {
+        max-width: 600px;
+    }
+
+    &__item-title {
+        margin-bottom: 22px;
+        font-size: 25px;
+        line-height: 32px;
+        font-weight: 600;
+        color: $mainText;
+    }
+
+    &__description {
+        margin-bottom: 12px;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: $mainText;
+
+        &--bonus {
+            margin-top: 25px;
+        }
+    }
+
+    &__red-title {
+        display: block;
+        font-weight: 700;
+        color: #D30531;
+        text-transform: uppercase;
+    }
+
+    &__photo {
+        display: block;
+    }
+}
+
+@media (max-width: 799px) {
+    .options {
+
+        &__container {
+            padding-top: 28px;
+            padding-bottom: 15px;
+        }
+
+        &__main-title {
+            display: block;
+            font-size: 20px;
+            line-height: 27px;
+            font-weight: 600;
+            margin: 0 auto 17px;
+            text-align: center;
+        }
+
+        &__item {
+            padding: 17px 0;
+            flex-direction: column;
+    
+            & .options__text {
+                margin-right: 0;
+            }
+
+            &:nth-child(2n) {
+                flex-direction: column;
+
+                & .options__text {
+                    margin-left: 0;
+                }
+            }
+    
+            &:last-child::after {
+                display: block;
+            }
+        }
+
+        &__text {
+            max-width: none;
+        }
+
+        &__item-title {
+            margin-bottom: 0;
+            padding-left: 58px;
+            font-size: 16px;
+            line-height: 24px;
+            color: #004685;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-underline-position: under;
+            position: relative;
+            transition: margin-bottom 1.1s ease;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -10px;
+                left: -6px;
+                width: 44px;
+                height: 44px;
+                background-image: url('../img/options-icon-gibdd.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 4px;
+                right: -4px;
+                width: 14px;
+                height: 14px;
+                background-image: url('../img/options-icon-arrow.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                transition: transform .3s;
+            }
+
+            &.active:after {
+                transform: scaleY(-1);
+              }
+
+            &--arreas::before {
+                background-image: url('../img/options-icon-fssp.svg');
+            }
+
+            &--taxes::before {
+                background-image: url('../img/options-icon-taxes.svg');
+            }
+
+            &--services::before {
+                background-image: url('../img/options-icon-rr.svg');
+            }
+
+            &.active {
+                margin-bottom: 12px;
+            }
+        }
+
+        &__wrapper {
+            max-height: 0;
+            padding: 0;
+            overflow: hidden;
+            transition: max-height .5s;
+        }
+
+        &__item-title.active + .options__wrapper {
+            max-height: 1000px;
+        }
+
+        &__photo {
+            display: none;
+        }
+    }
+}
