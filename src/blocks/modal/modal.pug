@@ -1,0 +1,19 @@
+mixin modal(modifier)
+  .modal
+    .modal__wrapper
+        .modal__overlay 
+        .modal__content 
+          button(type='button' aria-label='Кнопка закрытия модального окна').modal__close-btn
+            |  <svg class='modal__close-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            |    <g id="ic_close" transform="translate(-6 -6)">
+            |      <rect id="Rectangle_31" data-name="Rectangle 31" width="24" height="24" transform="translate(6 6)" fill="none"/>
+            |      <path id="Union_3" data-name="Union 3" d="M-778.527,850.174l-9.241,9.241-1.732-1.733,9.241-9.241-9.187-9.187,1.732-1.733,9.188,9.188,9.241-9.241,1.732,1.733-9.241,9.241,9.294,9.294-1.732,1.733Z" transform="translate(796.5 -830.467)" fill="rgba(0,0,0,0.25)"/>
+            |    </g>
+            |  </svg>
+          h2.modal__title Введите логин и пароль для входа в Личный кабинет
+          form(action='#' method='post').modal__form
+            input(type='text' required placeholder='Логин').modal__input
+            input(type='password' required placeholder='Пароль').modal__input
+            button(type='submit').modal__submit Войти
+          button(type='button').modal__help-btn Напомнить пароль 
+          button(type='button').modal__help-btn Регистрация

@@ -1,0 +1,153 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+  
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+  
+    background-color: rgba(0, 0, 0, 0.8);
+
+    &--opened {
+        display: flex;
+    }
+
+    &__wrapper {
+        position: relative;
+    
+        display: flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 100%;
+        padding: 60px 40px;
+    
+      }
+    
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        cursor: pointer;
+    }
+    
+    &__content {
+        width: 400px;
+        position: relative;
+        padding: 40px;
+
+        background-color: white;
+    }
+
+    &__title {
+        max-width: 267px;
+        margin-bottom: 32px;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        color: $mainText;
+    }
+
+    &__form {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 32px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 400;
+        padding: 19px 24px;
+        width: 100%;
+        margin-bottom: 16px;
+        border: 2px solid #00468533;
+        border-radius: 8px;
+        cursor: pointer;
+        outline: none;
+
+        &::placeholder {
+            color: #00000075;
+        }
+
+        &:focus::placeholder {
+            color: #00000033;
+        }
+    }
+
+    &__submit {
+        font-size: 24px;
+        line-height: 33px;
+        padding: 14px 32px;
+        color: $secondText;
+        background-color: #D30531;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+
+        &:hover {
+            background-color: #E1133F;
+        }
+    }
+
+    &__help-btn {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #004685;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-underline-position: under;
+        border: none;
+        background-color: transparent;
+        margin-bottom: 16px;
+        padding: 0;
+        display: block;
+        cursor: pointer;
+        
+        &:hover {
+            color: #569DDC;
+        }
+    }
+
+    &__close-btn {
+        width: 48px;
+        height: 48px;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+
+        &:hover .modal__close-icon path {
+            fill: #569DDC;
+        }
+    }
+}
+
+@media (max-width: 799px) {
+    .modal {
+
+        &__wrapper {
+            padding: 0;
+        }
+
+        &__content {
+            padding: 19px 24px;
+            width: 100%;
+            max-width: 360px;
+        }
+    }
+}

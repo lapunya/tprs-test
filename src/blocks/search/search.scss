@@ -4,12 +4,23 @@
     background-size: cover;
 
     &__container {
-        padding-top: 80px;
-        padding-bottom: 112px;
+        padding-top: 88px;
+        padding-bottom: 111px;
+    }
+
+    &__hidden-title {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     &__title {
-        margin-bottom: 35px;
+        margin-bottom: 16px;
         font-size: 36px;
         line-height: 49px;
         font-weight: 600;
@@ -27,7 +38,7 @@
         font-size: 16px;
         line-height: 24px;
         font-weight: 400;
-        padding: 19px 24px;
+        padding: 16px 24px;
         margin-right: 17px;
         max-width: 800px;
         border: 2px solid #00468533;
@@ -95,8 +106,8 @@
     .search {
 
         &__container {
-            padding-top: 40px;
-            padding-bottom: 40px;
+            padding-top: 39px;
+            padding-bottom: 33px;
         }
 
         &__title {
@@ -110,8 +121,10 @@
     
         &__input {
             max-width: 100%;
-            padding: 12px;
+            padding: 10px 12px;
             margin-right: 0;
+            margin-bottom: 4px;
+            border-radius: 4px;
         }
         &__btn {
             position: absolute;

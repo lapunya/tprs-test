@@ -32,11 +32,6 @@ var paths = {
     dest: './build/js',
     watch: ['./src/blocks/**/*.js', './src/js/**/*.js'],
   },
-  js2: {
-    src: ['./src/js/*.js'],
-    dest: './build/js',
-    watch: './src/plugins/*.js',
-  },
   images: {
     src: './src/blocks/**/img/*',
     dest: './build/img',
@@ -93,15 +88,6 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest(paths.js.dest))
 });
 
-gulp.task('scripts2', function () {
-  return gulp.src(paths.js2.src)
-    .pipe(plumber())
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
-    .pipe(gulp.dest(paths.js2.dest))
-});
-
 gulp.task('images', function () {
   return gulp.src(paths.images.src)
     .pipe(plumber())
@@ -139,7 +125,6 @@ gulp.task('server', function () {
   gulp.watch(paths.html.watch, gulp.parallel('templates'));
   gulp.watch(paths.css.watch, gulp.parallel('styles'));
   gulp.watch(paths.js.watch, gulp.parallel('scripts'));
-  gulp.watch(paths.js.watch, gulp.parallel('scripts2'));
   gulp.watch(paths.images.watch, gulp.parallel('images'));
   gulp.watch(paths.fonts.watch, gulp.parallel('fonts'));
   gulp.watch(paths.fonts.watch, gulp.parallel('favicon'));
@@ -150,7 +135,6 @@ gulp.task('build', gulp.series(
       'templates',
       'styles',
       'scripts',
-      'scripts2',
       'images',
       'fonts',
       'favicon'
