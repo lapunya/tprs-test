@@ -12,6 +12,11 @@ const  cleanCss = require('gulp-clean-css');
 const  sourcemaps = require('gulp-sourcemaps');
 const  uglify = require('gulp-uglify');
 const pump = require('pump');
+const ghpages = require('gh-pages');
+
+gulp.task("deploy", function (cb) {
+  return ghpages.publish("build", cb);
+});
 
 var paths = {
   dirs: {
