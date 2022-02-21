@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Test</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  </head>
+  <body>
+      <header class="header"> 
+          <div class="menu">
+            <h2 class="menu__title">Личный кабинет</h2>
+            <button class="menu__btn modal-open-btn" type="button">Вход в Личный кабинет</button>
+            <h2 class="menu__title">Как это работает</h2>
+            <ul class="menu__list"> 
+              <li class="menu__item"> <a class="menu__link" href="#">Условия использования сервиса</a></li>
+              <li class="menu__item"> <a class="menu__link" href="#">Способы оплаты</a></li>
+              <li class="menu__item"> <a class="menu__link" href="#">Часто задаваемые вопросы</a></li>
+              <li class="menu__item"> <a class="menu__link" href="#">Служба поддержки</a></li>
+            </ul>
+          </div>
+        <button class="header__menu-btn" type="button">
+           <svg class='header__menu-icon' viewBox="0 0 100 80" width="30" height="23">
+             <rect fill="#004685" width="100" height="11"></rect>
+             <rect fill="#004685" y="30" width="100" height="11"></rect>
+             <rect fill="#004685" y="60" width="100" height="11"></rect>
+           </svg>
+        </button><img class="header__main-logo" src="./img/header-site-logo.svg" width="294" height="44" alt="Логотип сайта">
+        <div class="header__help-wrapper">
+          <button class="header__help-btn" type="button"> <img class="header__help-icon" src="./img/header-help-icon.svg"></button>
+            <div class="support">
+              <h2 class="support__title">Тел. поддержки</h2><span class="support__phone">8 800 123-45-67</span><a class="support__link" href="">Написать письмо</a>
+            </div>
+        </div>
+      </header>
+      <div class="search"> 
+        <div class="container search__container">
+          <h1 class="search__hidden-title">Сайт оплаты штрафов, задолженностей и налогов</h1>
+          <h2 class="search__title">Поиск начислений</h2>
+          <form class="search__form" method="post" action="#">
+            <input class="search__input" type="text" required placeholder="Введите данные для поиска">
+            <button class="search__btn search__btn--desktop" type="submit">Найти</button>
+            <button class="search__btn search__btn--mobile" type="submit"><img class="search__icon" src="./img/search-icon.svg" width="26" height="26" alt="Иконка поиска"></button>
+          </form><span class="search__note">Чем больше параметров введено, тем полнее результаты поиска</span>
+        </div>
+      </div>
+      <div class="possibilities"> 
+        <div class="container possibilities__container">
+          <h2 class="possibilities__title">Здесь можно оплатить</h2>
+          <ul class="possibilities__list"> 
+            <li class="possibilities__item"> <a class="possibilities__link" href="#fines">Штрафы ГИБДД</a></li>
+            <li class="possibilities__item"> <a class="possibilities__link" href="#arreas">Судебные задолженности</a></li>
+            <li class="possibilities__item"> <a class="possibilities__link" href="#taxes">Налоги</a></li>
+            <li class="possibilities__item"> <a class="possibilities__link" href="#services">Услуги Росреестра</a></li>
+            <li class="possibilities__item"> <span class="possibilities__another">и другие услуги</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="options">
+        <div class="container options__container">
+          <h2 class="options__main-title">Узнайте, как оплатить</h2>
+          <ul class="options__list"> 
+            <li class="options__item" id="fines">
+              <div class="options__text">   
+                <h2 class="options__item-title">Штрафы ГИБДД</h2>
+                <div class="options__wrapper">
+                  <p class="options__description">Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер штрафа. </p>
+                  <p class="options__description">Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно.</p>
+                  <p class="options__description options__description--bonus"><b class='options__red-title'>Платить вовремя - дешевле!</b> В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в Личном кабинете.</p>
+                </div>
+              </div><img class="options__photo" src="./img/options-photo-1.png" width="320" height="320" alt="Фото сотрудника ГАИ">
+            </li>
+            <li class="options__item" id="arreas">
+              <div class="options__text">   
+                <h2 class="options__item-title options__item-title--arreas">Судебные задолженности</h2>
+                <div class="options__wrapper">
+                  <p class="options__description">Для поиска начислений в ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства.</p>
+                  <p class="options__description">Вы можете указать реквизиты платежа самостоятельно, заполнив форму.</p>
+                  <p class="options__description options__description--bonus"><b class='options__red-title'>Удобно!</b> Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами. Информацию о совершенных платежах сохраняйте в Личном кабинете.</p>
+                </div>
+              </div><img class="options__photo" src="./img/options-photo-2.png" width="320" height="320" alt="Фото сотрудника ГАИ">
+            </li>
+            <li class="options__item" id="taxes">
+              <div class="options__text">   
+                <h2 class="options__item-title options__item-title--taxes">Налоги</h2>
+                <div class="options__wrapper">
+                  <p class="options__description">Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, если у вас на руках есть квитанция.</p>
+                  <p class="options__description options__description--bonus"><b class='options__red-title'>Важно!</b> Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц.</p>
+                </div>
+              </div><img class="options__photo" src="./img/options-photo-3.png" width="320" height="320" alt="Фото сотрудника ГАИ">
+            </li>
+            <li class="options__item" id="services">
+              <div class="options__text">   
+                <h2 class="options__item-title options__item-title--services">Услуги Росреестра</h2>
+                <div class="options__wrapper">
+                  <p class="options__description">В поисковой строке укажите Код платежа, который был отправлен вам на почтовый ящик, указанный при подаче запроса в Росреестре.</p>
+                  <p class="options__description options__description--bonus"><b class='options__red-title'>Нет кода?</b> Если у вас ещё нет кода платежа, перейдите на сайт <a href=''>rosreestr.ru</a> и сформируйте запрос на оплату электронных услуг Росреестра.</p>
+                </div>
+              </div><img class="options__photo" src="./img/options-photo-4.png" width="320" height="320" alt="Фото сотрудника ГАИ">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="partners">
+        <div class="container partners__container"> 
+          <h2 class="partners__title">С нами работают</h2>
+          <ul class="partners__list"> 
+            <li class="partners__item">  <img class="partners__logo" src="./img/partners-logo-1.svg" width="110" height="100" alt="Логотип партнера 1"><span class="partners__name">Партнер 1</span></li>
+            <li class="partners__item">  <img class="partners__logo" src="./img/partners-logo-2.svg" width="90" height="100" alt="Логотип партнера 2"><span class="partners__name">Компания-партнер с длинным названием</span></li>
+            <li class="partners__item">  <img class="partners__logo" src="./img/partners-logo-3.svg" width="100" height="100" alt="Логотип партнера 3"><span class="partners__name">Партнер 3</span></li>
+            <li class="partners__item">  <img class="partners__logo" src="./img/partners-logo-4.svg" width="148" height="100" alt="Логотип партнера 4"><span class="partners__name">Название партнёра 4</span></li>
+            <li class="partners__item">  <img class="partners__logo" src="./img/partners-logo-5.svg" width="115" height="100" alt="Логотип партнера 5"><span class="partners__name">Компания-партнёра 5</span></li>
+            <li class="partners__item">  <img class="partners__logo" src="./img/partners-logo-6.svg" width="114" height="100" alt="Логотип партнера 6"><span class="partners__name">Партнер 6 с длинным названием</span></li>
+          </ul>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__text"><span class="footer__copyright">© 2012 – 2020 </span><span class="footer__name">ООО «Название компании»</span></div><img class="footer__logo" src="./img/footer-logo.png" width="79" height="52" alt="Логотип Comode secure">
+      </footer>
+      <div class="modal">
+        <div class="modal__wrapper">
+          <div class="modal__overlay"> </div>
+          <div class="modal__content"> 
+            <button class="modal__close-btn" type="button" aria-label="Кнопка закрытия модального окна">
+               <svg class='modal__close-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                 <g id="ic_close" transform="translate(-6 -6)">
+                   <rect id="Rectangle_31" data-name="Rectangle 31" width="24" height="24" transform="translate(6 6)" fill="none"/>
+                   <path id="Union_3" data-name="Union 3" d="M-778.527,850.174l-9.241,9.241-1.732-1.733,9.241-9.241-9.187-9.187,1.732-1.733,9.188,9.188,9.241-9.241,1.732,1.733-9.241,9.241,9.294,9.294-1.732,1.733Z" transform="translate(796.5 -830.467)" fill="rgba(0,0,0,0.25)"/>
+                 </g>
+               </svg>
+            </button>
+            <h2 class="modal__title">Введите логин и пароль для входа в Личный кабинет</h2>
+            <form class="modal__form" action="#" method="post">
+              <input class="modal__input" type="text" required placeholder="Логин">
+              <input class="modal__input" type="password" required placeholder="Пароль">
+              <button class="modal__submit" type="submit">Войти</button>
+            </form>
+            <button class="modal__help-btn" type="button">Напомнить пароль </button>
+            <button class="modal__help-btn" type="button">Регистрация</button>
+          </div>
+        </div>
+      </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
